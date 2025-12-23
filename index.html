@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SecureQR Chain</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header class="hero">
+  <div class="hero-card">
+    <h1>🔐 SecureQR Chain</h1>
+    <p>Turn Any UPI QR into a Blockchain-Verified QR</p>
+    <span class="tag">No Fake Payments • No Screenshots • Full Trust</span>
+  </div>
+</header>
+
+<section class="card">
+  <h2><i class="fa-solid fa-upload"></i> Upload Normal UPI QR</h2>
+  <input type="file" id="fileInput" accept="image/*">
+  <button onclick="scanQR()">Scan QR</button>
+  <p id="upiData"></p>
+</section>
+
+<section class="card">
+  <h2><i class="fa-solid fa-link"></i> Secure with Blockchain</h2>
+  <button onclick="secureQR()">Convert to Blockchain QR</button>
+  <p id="hash"></p>
+  <div id="secureQR"></div>
+</section>
+
+<section class="card">
+  <h2><i class="fa-solid fa-shield"></i> Why This Is Safe</h2>
+  <ul>
+    <li>✔ Screenshot fraud blocked</li>
+    <li>✔ QR tampering detected</li>
+    <li>✔ Hash verification required</li>
+    <li>✔ Retailer sees real confirmation</li>
+  </ul>
+</section>
+
+<!-- LIBRARIES -->
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

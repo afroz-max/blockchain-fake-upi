@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background: #0f2027;
+  overflow-x: hidden;
+}
+
+/* ANIMATED BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #00ffd5, transparent 60%),
+              radial-gradient(circle at bottom, #005eff, transparent 60%);
+  animation: moveBg 10s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { filter: blur(40px); }
+  to { filter: blur(80px); }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  padding: 50px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  transform: perspective(1000px) rotateX(8deg);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0) perspective(1000px) rotateX(8deg); }
+  50% { transform: translateY(-15px) perspective(1000px) rotateX(8deg); }
+}
+
+.tag {
+  color: #00ffd5;
+}
+
+/* CARDS */
+.card {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* INPUTS */
+input, button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background: linear-gradient(135deg, #00ffd5, #005eff);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#secureQR {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
